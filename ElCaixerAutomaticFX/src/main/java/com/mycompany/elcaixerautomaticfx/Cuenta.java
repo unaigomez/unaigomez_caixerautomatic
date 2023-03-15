@@ -13,12 +13,26 @@ public class Cuenta {
         this.saldoActual = saldoActual;
     }
 
+    @Override
+    public String toString() {
+        return "Cuenta{" + "numeroCuenta=" + numeroCuenta + ", tipoCuenta=" + tipoCuenta + ", saldoActual=" + saldoActual + '}';
+    }
+    
+
     public String getNumeroCuenta() {
         return numeroCuenta;
     }
 
+    public void setNumeroCuenta(String numeroCuenta) {
+        this.numeroCuenta = numeroCuenta;
+    }
+
     public String getTipoCuenta() {
         return tipoCuenta;
+    }
+
+    public void setTipoCuenta(String tipoCuenta) {
+        this.tipoCuenta = tipoCuenta;
     }
 
     public double getSaldoActual() {
@@ -28,6 +42,8 @@ public class Cuenta {
     public void setSaldoActual(double saldoActual) {
         this.saldoActual = saldoActual;
     }
+
+    
     
     
     

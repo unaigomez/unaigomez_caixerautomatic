@@ -17,8 +17,8 @@
       <TextField fx:id="usuarioTextField" layoutX="117.0" layoutY="144.0" />
       <Label layoutX="177.0" layoutY="185.0" text="Usuario" />
       <Label layoutX="484.0" layoutY="185.0" text="Contraseña" />
-      <Button fx:id="aceptarbtn" layoutX="459.0" layoutY="286.0" mnemonicParsing="false" onAction="#iniciarSesion" prefHeight="45.0" prefWidth="124.0" text="Aceptar" />
+      <Button fx:id="aceptarbtn" layoutX="289.0" layoutY="221.0" mnemonicParsing="false" onAction="#iniciarSesion" prefHeight="45.0" prefWidth="124.0" text="Aceptar" />
       <PasswordField fx:id="contrasenaPasswordField" layoutX="436.0" layoutY="144.0" />
-      <Label fx:id="mensajeLabel" layoutX="117.0" layoutY="301.0" prefHeight="16.0" prefWidth="170.0" textFill="#ee0000" />
+      <Label fx:id="mensajeLabel" layoutX="36.0" layoutY="301.0" prefHeight="24.0" prefWidth="630.0" textAlignment="CENTER" textFill="#ee0000" />
    </children>
 </Pane>
