@@ -53,19 +53,4 @@ public class Banco {
         }
         return null;
     }
-    
-    public Cliente BuscarUsuario(String usuario) {
-        for (int i = 0; i < App.banco.clientes.size(); i++) {
-            Cliente c = App.banco.clientes.get(i);
-            if (App.banco.getClientes().get(i).getUsuario().equals(usuario)) {
-                return c;
-            }
-        }
-        return null;
-    }
-    
-    
-    
 }
-
-//Esta clase tendría un ArrayList de clientes y métodos para agregar y eliminar clientes, buscar clientes por nombre de usuario, etc.

@@ -22,7 +22,7 @@ public class PrimaryController {
     @FXML
     Label mensajeLabel;
     
-    int intentosFallidos = 0;
+    int intentos = 0;
     
     public void setBanco(Banco banco) {
     this.banco = banco;
@@ -47,44 +47,29 @@ void iniciarSesion(ActionEvent event) throws IOException {
     String usuario = usuarioTextField.getText();
     String contrasena = contrasenaPasswordField.getText();
 
-    Cliente sesion = banco.buscarCliente(usuario, contrasena);
-    //Cliente bloquear = banco.BuscarUsuario(usuario);
-    System.out.println(sesion);
-    //System.out.println(bloquear);
-    
-   
+    Cliente sesion = App.banco.buscarCliente(usuario, contrasena);
+        System.out.println(sesion.toString());
     if (sesion != null) {
-        System.out.println("sessio iniciada");
+        System.out.println("Sesión iniciada");
+//        if (sesion.getIdusuario()==0001) {
+//            App.c1 = sesion;
+//        } else if (sesion.getIdusuario()==0002) {
+//            App.c2 = sesion;
+//        }
+
+        
+
         App.setRoot("secondary");
     } else {
-        mensajeLabel.setText("Usuario o contraseña incorrectos");
+        intentos++;
+        if (intentos == 3) {
+            aceptarbtn.setDisable(true); // Desactivamos el botón de aceptar
+            mensajeLabel.setText("Usuario o contraseña incorrectos. Has superado el número máximo de intentos.");
+        } else {
+            mensajeLabel.setText("Usuario o contraseña incorrectos. Intento " + intentos + " de 3.");
+        }
     }
-    
-//    if (bloquear != null) {
-//            if (intentosFallidos >= 3) {
-//            mensajeLabel.setText("Has excedido el número máximo de intentos fallidos. El usuario está bloqueado.");
-//            App.bloqueado.setIsbloqueado(true);
-//            // Agregar código para bloquear al usuario aquí
-//            } else {
-//                intentosFallidos++;
-//            }
-//        }
 }
 
     
-    
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-//    @FXML
-//    private void switchToSecondary() throws IOException {
-//        App.setRoot("secondary");
-//    }
 }

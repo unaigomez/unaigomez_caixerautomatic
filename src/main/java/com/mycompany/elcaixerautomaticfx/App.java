@@ -21,7 +21,6 @@ public class App extends Application {
     
     static Cliente c2;
     static Cliente sesion;
-    static Cliente bloqueado;
     
     public static Banco getBanco() {
     return banco;
@@ -32,10 +31,10 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         
         banco = new Banco("BBVA");
-        c1 = new Cliente("Unaigomez", "ugomez");
+        c1 = new Cliente("Unaigomez", "ugomez",0001);
         c1.agregarCuenta(new Cuenta("00001","corriente",1000));
         c1.agregarCuenta(new Cuenta("00002","ahorros",1500));
-        c2 = new Cliente("u2", "u2");
+        c2 = new Cliente("u2", "u2",0002);
         c2.agregarCuenta(new Cuenta("00003","corriente",2000));
         c2.agregarCuenta(new Cuenta("00004","ahorros",3000));
         banco.agregarCliente(c1);
