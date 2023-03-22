@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.elcaixerautomaticfx.App">
+   <children>
+      <Button fx:id="aceptarbtn" layoutX="225.0" layoutY="268.0" mnemonicParsing="false" text="Cambiar contraseña" />
+      <Label fx:id="mensajetxt" layoutX="282.0" layoutY="331.0" />
+      <Label layoutX="236.0" layoutY="74.0" text="Contraseña antigua" />
+      <TextField fx:id="antiguatxt" layoutX="215.0" layoutY="41.0" />
+      <TextField fx:id="nueva1txt" layoutX="215.0" layoutY="112.0" />
+      <TextField fx:id="nueva2txt" layoutX="215.0" layoutY="188.0" />
+      <Label layoutX="240.0" layoutY="144.0" text="Nueva contraseña" />
+      <Label layoutX="229.0" layoutY="218.0" text="Confirmar contraseña" />
+   </children>
+</Pane>

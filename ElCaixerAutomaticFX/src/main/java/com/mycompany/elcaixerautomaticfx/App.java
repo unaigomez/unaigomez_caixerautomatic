@@ -8,9 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/**
- * JavaFX App
- */
+
 public class App extends Application {
     
     private static Scene scene;
@@ -25,13 +23,20 @@ public class App extends Application {
     public static Banco getBanco() {
     return banco;
     }
+    public static void sesion(Cliente c) {
+        System.out.println(c);
+        sesion = c;
+    }
+    public static void logout(){
+        sesion = null;
+    }
 
 
     @Override
     public void start(Stage stage) throws IOException {
         
         banco = new Banco("BBVA");
-        c1 = new Cliente("Unaigomez", "ugomez",0001);
+        c1 = new Cliente("ugomez", "ugomez",0001);
         c1.agregarCuenta(new Cuenta("00001","corriente",1000));
         c1.agregarCuenta(new Cuenta("00002","ahorros",1500));
         c2 = new Cliente("u2", "u2",0002);
@@ -42,7 +47,7 @@ public class App extends Application {
         
         
         
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("primary.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("login.fxml"));
         Parent root = fxmlLoader.load();
         PrimaryController primaryController = fxmlLoader.getController();
         primaryController.setBanco(banco);
