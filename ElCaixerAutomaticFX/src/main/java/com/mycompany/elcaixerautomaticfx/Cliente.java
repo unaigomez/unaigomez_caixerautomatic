@@ -8,6 +8,7 @@ public class Cliente {
     private String usuario;
     private String contrasena;
     private ArrayList<Cuenta> cuentas;
+<<<<<<< HEAD
     private int idusuario;
 
     public Cliente(String usuario, String contrasena, int idusuario) {
@@ -16,16 +17,32 @@ public class Cliente {
         this.contrasena = contrasena;
         this.cuentas = new ArrayList<Cuenta>();
         this.idusuario = idusuario;
+=======
+    private boolean isbloqueado;
+
+    public Cliente(String usuario, String contrasena) {
+        this.usuario = usuario;
+        this.contrasena = contrasena;
+        this.cuentas = new ArrayList<Cuenta>();
+        this.isbloqueado = false;
+>>>>>>> 8452c3504976009be6ca9bcdb1006aefef35c2c2
     }
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return "Cliente{" + "usuario=" + usuario + ", contrasena=" + contrasena + ", cuentas=" + cuentas + ", idusuario=" + idusuario + '}';
     }
 
     
 
     
+=======
+        return "Cliente{" + "usuario=" + usuario + ", contrasena=" + contrasena + ", cuentas=" + cuentas + ", isbloqueado=" + isbloqueado + '}';
+    }
+
+    
+>>>>>>> 8452c3504976009be6ca9bcdb1006aefef35c2c2
     
     
 
@@ -53,6 +70,7 @@ public class Cliente {
         this.cuentas = cuentas;
     }
 
+<<<<<<< HEAD
     public int getIdusuario() {
         return idusuario;
     }
@@ -67,6 +85,16 @@ public class Cliente {
 
     
     
+=======
+    public boolean isIsbloqueado() {
+        return isbloqueado;
+    }
+
+    public void setIsbloqueado(boolean isbloqueado) {
+        this.isbloqueado = isbloqueado;
+    }
+    
+>>>>>>> 8452c3504976009be6ca9bcdb1006aefef35c2c2
 
     
 
