@@ -15,7 +15,6 @@ public class App extends Application {
     static Banco banco;
     
     static Cliente c1;
-    
     static Cliente c2;
     static Cliente sesion;
     
@@ -39,11 +38,12 @@ public class App extends Application {
         banco = new Banco("BBVA");
 
         c1 = new Cliente("ugomez", "ugomez",0001);
-        c1.agregarCuenta(new Cuenta("00001","corriente",1000));
-        c1.agregarCuenta(new Cuenta("00002","ahorros",1500));
+        c1.agregarCuenta(new Cuenta("01","Corriente",1000));
+        c1.agregarCuenta(new Cuenta("02","Ahorros",1500));
         c2 = new Cliente("u2", "u2",0002);
-        c2.agregarCuenta(new Cuenta("00003","corriente",2000));
-        c2.agregarCuenta(new Cuenta("00004","ahorros",3000));
+        c2.agregarCuenta(new Cuenta("03","Corriente",2000));
+        c2.agregarCuenta(new Cuenta("04","Ahorros",3000));
+        c2.agregarCuenta(new Cuenta("05","Ahorros",3000));
         banco.agregarCliente(c1);
         banco.agregarCliente(c2);
         

@@ -27,7 +27,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" + "usuario=" + usuario + ", contrasena=" + contrasena + ", cuentas=" + cuentas + ", idusuario=" + idusuario + '}';
+        return "Cliente{" + "usuario=" + usuario + ", contrasena=" + contrasena + ", cuentas=" + cuentas.toString() + ", idusuario=" + idusuario + '}';
     }
 
     public String getUsuario() {

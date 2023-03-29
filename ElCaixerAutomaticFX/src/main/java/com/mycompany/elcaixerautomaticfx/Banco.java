@@ -46,7 +46,6 @@ public class Banco {
         for (int i = 0; i < App.banco.clientes.size(); i++) {
             Cliente c = App.banco.clientes.get(i);
             if (App.banco.getClientes().get(i).getUsuario().equals(usuario) && App.banco.getClientes().get(i).getContrasena().equals(contrasena)) {
-                // Usuario encontrado, hacer algo aquí
                 System.out.println("Usuario encontrado");
                 return c;
             }
