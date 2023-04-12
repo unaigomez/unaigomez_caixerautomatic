@@ -9,7 +9,7 @@
       <Button layoutX="252.0" layoutY="293.0" mnemonicParsing="false" onAction="#cerrarsesion" text="Cerrar sesión" />
       <Button layoutX="245.0" layoutY="43.0" mnemonicParsing="false" onAction="#consultarsaldo" text="Consultar saldo" />
       <Button layoutX="273.0" layoutY="91.0" mnemonicParsing="false" text="Retirar" />
-      <Button layoutX="268.0" layoutY="138.0" mnemonicParsing="false" text="Ingresar" />
+      <Button layoutX="268.0" layoutY="138.0" mnemonicParsing="false" onAction="#ingresar" text="Ingresar" />
       <Button layoutX="251.0" layoutY="188.0" mnemonicParsing="false" text="Transferencia" />
       <Button layoutX="230.0" layoutY="236.0" mnemonicParsing="false" onAction="#cambiarcontraseña" text="Cambiar contraseña" />
       <Button layoutX="27.0" layoutY="269.0" mnemonicParsing="false" onAction="#probar" text="probarusuarios" />

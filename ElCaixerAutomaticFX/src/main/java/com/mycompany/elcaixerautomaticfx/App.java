@@ -43,7 +43,6 @@ public class App extends Application {
         c2 = new Cliente("u2", "u2",0002);
         c2.agregarCuenta(new Cuenta("03","Corriente",2000));
         c2.agregarCuenta(new Cuenta("04","Ahorros",3000));
-        c2.agregarCuenta(new Cuenta("05","Ahorros",3000));
         banco.agregarCliente(c1);
         banco.agregarCliente(c2);
         

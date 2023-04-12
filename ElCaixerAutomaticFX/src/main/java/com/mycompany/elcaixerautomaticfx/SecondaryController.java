@@ -28,6 +28,10 @@ public class SecondaryController {
     private void consultarsaldo() throws IOException{
        App.setRoot("consultarsaldo");
     }
+    @FXML
+    private void ingresar() throws IOException{
+       App.setRoot("ingresar");
+    }
     
     @FXML
     void probar(){
