@@ -32,6 +32,14 @@ public class SecondaryController {
     private void ingresar() throws IOException{
        App.setRoot("ingresar");
     }
+    @FXML
+    private void transferir() throws IOException{
+       App.setRoot("transferencias");
+    }
+    @FXML
+    private void retirar() throws IOException{
+       App.setRoot("retirar");
+    }
     
     @FXML
     void probar(){
@@ -39,5 +47,9 @@ public class SecondaryController {
         System.out.println(App.c2.toString());
         System.out.println(App.sesion.toString());
         
+    }
+    @FXML
+    void probarbilletes(){
+        System.out.println(App.cajero.toString());
     }
 }

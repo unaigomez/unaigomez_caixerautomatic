@@ -1,3 +1,4 @@
+
 package com.mycompany.elcaixerautomaticfx;
 
 import java.io.IOException;
@@ -10,7 +11,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.TextField;
 
-public class Ingresar {
+
+public class Retirar {
     @FXML
     TextField dinerotxt;
     @FXML
@@ -18,9 +20,9 @@ public class Ingresar {
     @FXML
     Label labelSaldo;
     @FXML
-    Button ingresarbtn;
+    Button retirarbtn;
     
-    double totalIngreso = 0;
+    double totalRetiro = 0;
     int cnt500 = 0;
     int cnt200 = 0;
     int cnt100 = 0;
@@ -29,25 +31,19 @@ public class Ingresar {
     int cnt10 = 0;
     int cnt5 = 0;
     
-    
     @FXML 
-    void ingresar(){
-        double dinero = totalIngreso;
+    void retirar(){
+        double dinero = totalRetiro;
         Cuenta cuentaSeleccionada = comboBoxCuentas.getSelectionModel().getSelectedItem();
         if (cuentaSeleccionada != null) {
-            double saldoActual = cuentaSeleccionada.getSaldoActual();
-            double saldoNuevo = saldoActual + dinero;
-            cuentaSeleccionada.setSaldoActual(saldoNuevo);
-            System.out.println(cuentaSeleccionada.getSaldoActual());
-            labelSaldo.setText("Saldo: " + saldoNuevo);
             
-            App.cajero.ingresarBilletes(500, cnt500);
-            App.cajero.ingresarBilletes(200, cnt200);
-            App.cajero.ingresarBilletes(100, cnt100);
-            App.cajero.ingresarBilletes(50, cnt50);
-            App.cajero.ingresarBilletes(20, cnt20);
-            App.cajero.ingresarBilletes(10, cnt10);
-            App.cajero.ingresarBilletes(5, cnt5);
+            App.cajero.retirarBilletes(500, cnt500);
+            App.cajero.retirarBilletes(200, cnt200);
+            App.cajero.retirarBilletes(100, cnt100);
+            App.cajero.retirarBilletes(50, cnt50);
+            App.cajero.retirarBilletes(20, cnt20);
+            App.cajero.retirarBilletes(10, cnt10);
+            App.cajero.retirarBilletes(5, cnt5);
             cnt500 = 0;
             cnt200 = 0;
             cnt100 = 0;
@@ -55,53 +51,72 @@ public class Ingresar {
             cnt20 = 0;
             cnt10 = 0;
             cnt5 = 0;
-            
+            if (cuentaSeleccionada.getSaldoActual()-dinero<0) {
+                dinerotxt.clear();
+                totalRetiro = 0;
+                Alert alert = new Alert(Alert.AlertType.ERROR, "No tienes suficiente dinero para realizar la operación");
+                alert.showAndWait();
+                return;
+            }
+            if (!App.cajero.isOperacion()) {
+                dinerotxt.clear();
+                totalRetiro = 0;
+                return;
+            }
+            double saldoActual = cuentaSeleccionada.getSaldoActual();
+            double saldoNuevo = saldoActual - dinero;
+            cuentaSeleccionada.setSaldoActual(saldoNuevo);
+            System.out.println(cuentaSeleccionada.getSaldoActual());
+            labelSaldo.setText("Saldo: " + saldoNuevo);
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "El retiro se realizó exitosamente");
+            alert.showAndWait();
+            totalRetiro = 0;
         }
         dinerotxt.clear();
-        Alert alert = new Alert(Alert.AlertType.INFORMATION, "El ingreso se realizó exitosamente");
-        alert.showAndWait();
+        
     }
+    
+    
     @FXML
     void s500 () {
-        totalIngreso += 500;
-        dinerotxt.setText(Double.toString(totalIngreso));
+        totalRetiro += 500;
+        dinerotxt.setText(Double.toString(totalRetiro));
         cnt500++;
-        
     }
     @FXML
     void s200 () {
-        totalIngreso += 200;
-        dinerotxt.setText(Double.toString(totalIngreso));
+        totalRetiro += 200;
+        dinerotxt.setText(Double.toString(totalRetiro));
         cnt200++;
     }
     @FXML
     void s100 () {
-        totalIngreso += 100;
-        dinerotxt.setText(Double.toString(totalIngreso));
+        totalRetiro += 100;
+        dinerotxt.setText(Double.toString(totalRetiro));
         cnt100++;
     }
     @FXML
     void s50 () {
-        totalIngreso += 50;
-        dinerotxt.setText(Double.toString(totalIngreso));
+        totalRetiro += 50;
+        dinerotxt.setText(Double.toString(totalRetiro));
         cnt50++;
     }
     @FXML
     void s20 () {
-        totalIngreso += 20;
-        dinerotxt.setText(Double.toString(totalIngreso));
+        totalRetiro += 20;
+        dinerotxt.setText(Double.toString(totalRetiro));
         cnt20++;
     }
     @FXML
     void s10 () {
-        totalIngreso += 10;
-        dinerotxt.setText(Double.toString(totalIngreso));
+        totalRetiro += 10;
+        dinerotxt.setText(Double.toString(totalRetiro));
         cnt10++;
     }
     @FXML
     void s5 () {
-        totalIngreso += 5;
-        dinerotxt.setText(Double.toString(totalIngreso));
+        totalRetiro += 5;
+        dinerotxt.setText(Double.toString(totalRetiro));
         cnt5++;
     }
     
@@ -131,13 +146,13 @@ public class Ingresar {
     for (Cuenta cuenta : cuentas) {
         saldoTotal += cuenta.getSaldoActual();
     }
-    ingresarbtn.setDisable(true);
+    retirarbtn.setDisable(true);
     comboBoxCuentas.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
-        ingresarbtn.setDisable(newVal == null || dinerotxt.getText().isEmpty());
+        retirarbtn.setDisable(newVal == null || dinerotxt.getText().isEmpty());
     });
 
     dinerotxt.textProperty().addListener((obs, oldVal, newVal) -> {
-        ingresarbtn.setDisable(comboBoxCuentas.getSelectionModel().isEmpty() || newVal.isEmpty());
+        retirarbtn.setDisable(comboBoxCuentas.getSelectionModel().isEmpty() || newVal.isEmpty());
     });
 
     }

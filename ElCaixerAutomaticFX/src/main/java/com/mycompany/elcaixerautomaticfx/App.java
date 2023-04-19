@@ -17,6 +17,7 @@ public class App extends Application {
     static Cliente c1;
     static Cliente c2;
     static Cliente sesion;
+    static Cajero cajero;
     
     public static Banco getBanco() {
     return banco;
@@ -36,12 +37,13 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         
         banco = new Banco("BBVA");
+        cajero = new Cajero();
 
         c1 = new Cliente("ugomez", "ugomez",0001);
-        c1.agregarCuenta(new Cuenta("01","Corriente",1000));
+        c1.agregarCuenta(new CuentaCorriente("01",1000));
         c1.agregarCuenta(new Cuenta("02","Ahorros",1500));
         c2 = new Cliente("u2", "u2",0002);
-        c2.agregarCuenta(new Cuenta("03","Corriente",2000));
+        c2.agregarCuenta(new CuentaCorriente("03",2000));
         c2.agregarCuenta(new Cuenta("04","Ahorros",3000));
         banco.agregarCliente(c1);
         banco.agregarCliente(c2);

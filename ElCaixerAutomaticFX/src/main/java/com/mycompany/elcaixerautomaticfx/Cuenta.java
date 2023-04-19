@@ -15,7 +15,7 @@ public class Cuenta {
 
     @Override
     public String toString() {
-        return "Cuenta{" + "numeroCuenta=" + numeroCuenta + ", tipoCuenta=" + tipoCuenta + ", saldoActual=" + saldoActual + '}';
+        return "{" + "Cuenta = " + numeroCuenta + " - " + tipoCuenta + '}';
     }
     
 

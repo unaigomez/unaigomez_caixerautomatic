@@ -8,11 +8,12 @@
    <children>
       <Button layoutX="252.0" layoutY="293.0" mnemonicParsing="false" onAction="#cerrarsesion" text="Cerrar sesión" />
       <Button layoutX="245.0" layoutY="43.0" mnemonicParsing="false" onAction="#consultarsaldo" text="Consultar saldo" />
-      <Button layoutX="273.0" layoutY="91.0" mnemonicParsing="false" text="Retirar" />
+      <Button layoutX="273.0" layoutY="91.0" mnemonicParsing="false" onAction="#retirar" text="Retirar" />
       <Button layoutX="268.0" layoutY="138.0" mnemonicParsing="false" onAction="#ingresar" text="Ingresar" />
-      <Button layoutX="251.0" layoutY="188.0" mnemonicParsing="false" text="Transferencia" />
+      <Button layoutX="251.0" layoutY="188.0" mnemonicParsing="false" onAction="#transferir" text="Transferencia" />
       <Button layoutX="230.0" layoutY="236.0" mnemonicParsing="false" onAction="#cambiarcontraseña" text="Cambiar contraseña" />
       <Button layoutX="27.0" layoutY="269.0" mnemonicParsing="false" onAction="#probar" text="probarusuarios" />
       <Label fx:id="bienvenidolbl" layoutX="27.0" layoutY="35.0" />
+      <Button layoutX="23.0" layoutY="305.0" mnemonicParsing="false" onAction="#probarbilletes" text="probarbilletes" />
    </children>
 </Pane>
