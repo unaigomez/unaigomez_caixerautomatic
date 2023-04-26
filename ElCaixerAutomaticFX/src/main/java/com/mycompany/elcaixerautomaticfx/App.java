@@ -27,6 +27,7 @@ public class App extends Application {
         System.out.println(c);
         sesion = c;
     }
+    
     public static void logout(){
         sesion = null;
     }
@@ -56,7 +57,7 @@ public class App extends Application {
         Parent root = fxmlLoader.load();
         PrimaryController primaryController = fxmlLoader.getController();
         primaryController.setBanco(banco);
-        scene = new Scene(root, 640, 480);
+        scene = new Scene(root, 900, 600);
         stage.setScene(scene);
         stage.show();
     }

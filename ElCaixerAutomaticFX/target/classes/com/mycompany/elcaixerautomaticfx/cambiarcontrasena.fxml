@@ -5,17 +5,17 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.elcaixerautomaticfx.Cambiarcontrasena">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.elcaixerautomaticfx.Cambiarcontrasena">
    <children>
-      <Button fx:id="aceptarbtn" layoutX="225.0" layoutY="251.0" mnemonicParsing="false" onAction="#cambiar" text="Cambiar contraseña" />
+      <Button fx:id="aceptarbtn" layoutX="375.0" layoutY="391.0" mnemonicParsing="false" onAction="#cambiar" text="Cambiar contraseña" />
       <Label fx:id="mensajetxt" layoutX="282.0" layoutY="331.0" />
-      <Label layoutX="236.0" layoutY="74.0" text="Contraseña antigua" />
-      <Label layoutX="240.0" layoutY="144.0" text="Nueva contraseña" />
-      <Label layoutX="229.0" layoutY="218.0" text="Confirmar contraseña" />
-      <Button layoutX="211.0" layoutY="347.0" mnemonicParsing="false" onAction="#volver" text="Volver al menú principal" />
+      <Label layoutX="385.0" layoutY="154.0" text="Contraseña antigua" />
+      <Label layoutX="390.0" layoutY="240.0" text="Nueva contraseña" />
+      <Label layoutX="379.0" layoutY="323.0" text="Confirmar contraseña" />
+      <Button layoutX="362.0" layoutY="465.0" mnemonicParsing="false" onAction="#volver" text="Volver al menú principal" />
       <Label fx:id="mensaje" layoutX="111.0" layoutY="293.0" />
-      <PasswordField fx:id="antiguapswd" layoutX="214.0" layoutY="37.0" />
-      <PasswordField fx:id="nueva1pswd" layoutX="214.0" layoutY="111.0" />
-      <PasswordField fx:id="nueva2pswd" layoutX="215.0" layoutY="188.0" />
+      <PasswordField fx:id="antiguapswd" layoutX="364.0" layoutY="130.0" />
+      <PasswordField fx:id="nueva1pswd" layoutX="364.0" layoutY="205.0" />
+      <PasswordField fx:id="nueva2pswd" layoutX="364.0" layoutY="297.0" />
    </children>
 </Pane>

@@ -4,16 +4,17 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.elcaixerautomaticfx.SecondaryController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.elcaixerautomaticfx.SecondaryController">
    <children>
-      <Button layoutX="252.0" layoutY="293.0" mnemonicParsing="false" onAction="#cerrarsesion" text="Cerrar sesión" />
-      <Button layoutX="245.0" layoutY="43.0" mnemonicParsing="false" onAction="#consultarsaldo" text="Consultar saldo" />
-      <Button layoutX="273.0" layoutY="91.0" mnemonicParsing="false" onAction="#retirar" text="Retirar" />
-      <Button layoutX="268.0" layoutY="138.0" mnemonicParsing="false" onAction="#ingresar" text="Ingresar" />
-      <Button layoutX="251.0" layoutY="188.0" mnemonicParsing="false" onAction="#transferir" text="Transferencia" />
-      <Button layoutX="230.0" layoutY="236.0" mnemonicParsing="false" onAction="#cambiarcontraseña" text="Cambiar contraseña" />
-      <Button layoutX="27.0" layoutY="269.0" mnemonicParsing="false" onAction="#probar" text="probarusuarios" />
+      <Button layoutX="398.0" layoutY="469.0" mnemonicParsing="false" onAction="#cerrarsesion" text="Cerrar sesión" />
+      <Button layoutX="390.0" layoutY="51.0" mnemonicParsing="false" onAction="#consultarsaldo" text="Consultar saldo" />
+      <Button layoutX="417.0" layoutY="168.0" mnemonicParsing="false" onAction="#retirar" text="Retirar" />
+      <Button layoutX="413.0" layoutY="109.0" mnemonicParsing="false" onAction="#ingresar" text="Ingresar" />
+      <Button layoutX="396.0" layoutY="225.0" mnemonicParsing="false" onAction="#transferir" text="Transferencia" />
+      <Button layoutX="374.0" layoutY="396.0" mnemonicParsing="false" onAction="#cambiarcontraseña" text="Cambiar contraseña" />
+      <Button layoutX="61.0" layoutY="396.0" mnemonicParsing="false" onAction="#probar" text="probarusuarios" />
       <Label fx:id="bienvenidolbl" layoutX="27.0" layoutY="35.0" />
-      <Button layoutX="23.0" layoutY="305.0" mnemonicParsing="false" onAction="#probarbilletes" text="probarbilletes" />
+      <Button layoutX="65.0" layoutY="451.0" mnemonicParsing="false" onAction="#probarbilletes" text="probarbilletes" />
+      <Button layoutX="366.0" layoutY="312.0" mnemonicParsing="false" onAction="#movimientos" text="Consultar movimientos" />
    </children>
 </Pane>

@@ -40,12 +40,17 @@ public class SecondaryController {
     private void retirar() throws IOException{
        App.setRoot("retirar");
     }
+    @FXML
+    private void movimientos() throws IOException{
+        App.setRoot("movimientos");
+    }
     
     @FXML
     void probar(){
         System.out.println(App.c1.toString());
         System.out.println(App.c2.toString());
         System.out.println(App.sesion.toString());
+        System.out.println(App.sesion.getCuentas().toString());
         
     }
     @FXML
