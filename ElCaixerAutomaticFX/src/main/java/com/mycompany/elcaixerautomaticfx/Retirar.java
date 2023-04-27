@@ -68,7 +68,7 @@ public class Retirar {
             cuentaSeleccionada.setSaldoActual(saldoNuevo);
             System.out.println(cuentaSeleccionada.getSaldoActual());
             labelSaldo.setText("Saldo: " + saldoNuevo);
-            cuentaSeleccionada.agregarMovimiento(new Movimiento("Retiro",totalRetiro));
+            cuentaSeleccionada.agregarMovimiento(new Movimiento("Retiro",-totalRetiro,cuentaSeleccionada.getNumeroCuenta()));
             Alert alert = new Alert(Alert.AlertType.INFORMATION, "El retiro se realizó exitosamente");
             alert.showAndWait();
             totalRetiro = 0;

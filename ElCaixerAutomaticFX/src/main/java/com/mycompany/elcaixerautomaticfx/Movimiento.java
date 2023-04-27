@@ -9,18 +9,20 @@ public class Movimiento {
     private LocalDateTime fecha;
     private String tipo;
     private double importe;
+    private String cuenta;
 
-    public Movimiento(String tipo, double importe) {
+    public Movimiento(String tipo, double importe, String cuenta) {
         this.fecha = LocalDateTime.now();
         this.tipo = tipo;
         this.importe = importe;
+        this.cuenta = cuenta;
     }
 
     @Override
     public String toString() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         String fechaFormateada = fecha.format(formatter);
-        return "Movimiento{" + "fecha=" + fechaFormateada + ", tipo=" + tipo + ", importe=" + importe + '}';
+        return "Movimiento ==> {" + "Fecha = " + fechaFormateada + "  |  Tipo =" + tipo + " |  Importe =" + importe + "€  |  Cuenta = "+ cuenta+ '}';
     }
 
     
@@ -48,6 +50,15 @@ public class Movimiento {
     public void setImporte(double importe) {
         this.importe = importe;
     }
+
+    public String getCuenta() {
+        return cuenta;
+    }
+
+    public void setCuenta(String cuenta) {
+        this.cuenta = cuenta;
+    }
+    
 
     
     

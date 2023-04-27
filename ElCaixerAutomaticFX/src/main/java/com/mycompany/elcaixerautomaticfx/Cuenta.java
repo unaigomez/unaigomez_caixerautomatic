@@ -2,6 +2,7 @@
 package com.mycompany.elcaixerautomaticfx;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Cuenta {
@@ -19,7 +20,7 @@ public class Cuenta {
 
     @Override
     public String toString() {
-        return "{" + "Cuenta = " + numeroCuenta + " - " + tipoCuenta + "Movimientos = " + movimientos.toString() + '}';
+        return "{" + "Cuenta = " + numeroCuenta + " - " + tipoCuenta+ '}';
     }
     
 
@@ -47,8 +48,25 @@ public class Cuenta {
         this.saldoActual = saldoActual;
     }
 
+    public ArrayList<Movimiento> getMovimientos() {
+        return movimientos;
+    }
+
+    public void setMovimientos(ArrayList<Movimiento> movimientos) {
+        this.movimientos = movimientos;
+    }
+    
+
     public void agregarMovimiento(Movimiento movimiento) {
         movimientos.add(movimiento);
+    }
+    
+    public List<Movimiento> getListaMovimientos() {
+        List<Movimiento> movimientos = new ArrayList<>();
+        for (Movimiento movimiento : this.movimientos) {
+            movimientos.add(movimiento);
+        }
+        return movimientos;
     }
     
     

@@ -58,7 +58,7 @@ public class Ingresar {
             
         }
         dinerotxt.clear();
-        cuentaSeleccionada.agregarMovimiento(new Movimiento("Ingreso",totalIngreso));
+        cuentaSeleccionada.agregarMovimiento(new Movimiento("Ingreso",totalIngreso,cuentaSeleccionada.getNumeroCuenta()));
         Alert alert = new Alert(Alert.AlertType.INFORMATION, "El ingreso se realizó exitosamente");
         totalIngreso=0;
         alert.showAndWait();

@@ -2,6 +2,7 @@
 package com.mycompany.elcaixerautomaticfx;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Cliente {
@@ -67,6 +68,15 @@ public class Cliente {
     public void agregarCuenta(Cuenta cuenta) {
         cuentas.add(cuenta);
     }
+    
+    public List<Movimiento> getMovimientos() {
+        List<Movimiento> movimientos = new ArrayList<>();
+        for (Cuenta cuenta : this.cuentas) {
+            movimientos.addAll(cuenta.getMovimientos());
+        }
+        return movimientos;
+    }
+
     
     
     

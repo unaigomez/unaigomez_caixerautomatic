@@ -78,6 +78,7 @@ public class Transferir {
         // Realizar la transferencia
         try {
             ((CuentaCorriente) cuentaOrigen).transferir((CuentaCorriente) cuentaDestino, monto);
+            cuentaOrigen.agregarMovimiento(new Movimiento("Transferencia",-monto,cuentaOrigen.getNumeroCuenta()));
             Alert alert = new Alert(AlertType.INFORMATION, "La transferencia se realizó exitosamente");
             alert.showAndWait();
         } catch (IllegalArgumentException e) {

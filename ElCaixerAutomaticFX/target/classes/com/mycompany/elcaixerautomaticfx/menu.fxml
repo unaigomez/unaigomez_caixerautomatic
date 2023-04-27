@@ -16,5 +16,6 @@
       <Label fx:id="bienvenidolbl" layoutX="27.0" layoutY="35.0" />
       <Button layoutX="65.0" layoutY="451.0" mnemonicParsing="false" onAction="#probarbilletes" text="probarbilletes" />
       <Button layoutX="366.0" layoutY="312.0" mnemonicParsing="false" onAction="#movimientos" text="Consultar movimientos" />
+      <Button layoutX="384.0" layoutY="353.0" mnemonicParsing="false" onAction="#cantidadbilletes" text="Cantidad billetes" />
    </children>
 </Pane>

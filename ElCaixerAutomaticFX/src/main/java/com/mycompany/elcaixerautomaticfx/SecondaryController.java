@@ -44,6 +44,10 @@ public class SecondaryController {
     private void movimientos() throws IOException{
         App.setRoot("movimientos");
     }
+    @FXML
+    private void cantidadbilletes() throws IOException{
+        App.setRoot("cantidadbilletes");
+    }
     
     @FXML
     void probar(){
