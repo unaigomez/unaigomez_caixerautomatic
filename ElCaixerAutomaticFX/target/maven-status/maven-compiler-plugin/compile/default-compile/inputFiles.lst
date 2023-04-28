@@ -4,6 +4,7 @@
 /home/alumne/NetBeansProjects/ElCaixerAutomaticFX/ElCaixerAutomaticFX/src/main/java/com/mycompany/elcaixerautomaticfx/Ingresar.java
 /home/alumne/NetBeansProjects/ElCaixerAutomaticFX/ElCaixerAutomaticFX/src/main/java/com/mycompany/elcaixerautomaticfx/CuentaCorriente.java
 /home/alumne/NetBeansProjects/ElCaixerAutomaticFX/ElCaixerAutomaticFX/src/main/java/com/mycompany/elcaixerautomaticfx/Cambiarcontrasena.java
+/home/alumne/NetBeansProjects/ElCaixerAutomaticFX/ElCaixerAutomaticFX/src/main/java/com/mycompany/elcaixerautomaticfx/Divisas.java
 /home/alumne/NetBeansProjects/ElCaixerAutomaticFX/ElCaixerAutomaticFX/src/main/java/com/mycompany/elcaixerautomaticfx/Movimiento.java
 /home/alumne/NetBeansProjects/ElCaixerAutomaticFX/ElCaixerAutomaticFX/src/main/java/com/mycompany/elcaixerautomaticfx/PrimaryController.java
 /home/alumne/NetBeansProjects/ElCaixerAutomaticFX/ElCaixerAutomaticFX/src/main/java/com/mycompany/elcaixerautomaticfx/Cajero.java
@@ -15,3 +16,4 @@
 /home/alumne/NetBeansProjects/ElCaixerAutomaticFX/ElCaixerAutomaticFX/src/main/java/com/mycompany/elcaixerautomaticfx/Cliente.java
 /home/alumne/NetBeansProjects/ElCaixerAutomaticFX/ElCaixerAutomaticFX/src/main/java/com/mycompany/elcaixerautomaticfx/Transferir.java
 /home/alumne/NetBeansProjects/ElCaixerAutomaticFX/ElCaixerAutomaticFX/src/main/java/com/mycompany/elcaixerautomaticfx/Cantidadbilletes.java
+/home/alumne/NetBeansProjects/ElCaixerAutomaticFX/ElCaixerAutomaticFX/src/main/java/com/mycompany/elcaixerautomaticfx/Cambiarusuario.java

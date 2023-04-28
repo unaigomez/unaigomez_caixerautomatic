@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.elcaixerautomaticfx.Divisas">
+   <children>
+      <Button layoutX="75.0" layoutY="516.0" mnemonicParsing="false" onAction="#volver" text="Volver" />
+      <TextField fx:id="eurosTextField" layoutX="365.0" layoutY="94.0" />
+      <RadioButton fx:id="usdRadioButton" layoutX="53.0" layoutY="185.0" mnemonicParsing="false" text="USD">
+         <toggleGroup>
+            <ToggleGroup fx:id="a1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="gbpRadioButton" layoutX="53.0" layoutY="215.0" mnemonicParsing="false" text="GBP" toggleGroup="$a1" />
+      <RadioButton fx:id="mxnRadioButton" layoutX="53.0" layoutY="243.0" mnemonicParsing="false" text="MXN" toggleGroup="$a1" />
+      <RadioButton fx:id="arsRadioButton" layoutX="52.0" layoutY="271.0" mnemonicParsing="false" text="ARS" toggleGroup="$a1" />
+      <Label fx:id="outputLabel" layoutX="484.0" layoutY="371.0" />
+   </children>
+</Pane>

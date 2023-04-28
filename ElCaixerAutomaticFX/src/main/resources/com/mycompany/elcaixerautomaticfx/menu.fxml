@@ -6,16 +6,18 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.elcaixerautomaticfx.SecondaryController">
    <children>
-      <Button layoutX="398.0" layoutY="469.0" mnemonicParsing="false" onAction="#cerrarsesion" text="Cerrar sesión" />
-      <Button layoutX="390.0" layoutY="51.0" mnemonicParsing="false" onAction="#consultarsaldo" text="Consultar saldo" />
-      <Button layoutX="417.0" layoutY="168.0" mnemonicParsing="false" onAction="#retirar" text="Retirar" />
-      <Button layoutX="413.0" layoutY="109.0" mnemonicParsing="false" onAction="#ingresar" text="Ingresar" />
-      <Button layoutX="396.0" layoutY="225.0" mnemonicParsing="false" onAction="#transferir" text="Transferencia" />
-      <Button layoutX="374.0" layoutY="396.0" mnemonicParsing="false" onAction="#cambiarcontraseña" text="Cambiar contraseña" />
+      <Button layoutX="398.0" layoutY="515.0" mnemonicParsing="false" onAction="#cerrarsesion" text="Cerrar sesión" />
+      <Button layoutX="388.0" layoutY="31.0" mnemonicParsing="false" onAction="#consultarsaldo" text="Consultar saldo" />
+      <Button layoutX="415.0" layoutY="132.0" mnemonicParsing="false" onAction="#retirar" text="Retirar" />
+      <Button layoutX="411.0" layoutY="83.0" mnemonicParsing="false" onAction="#ingresar" text="Ingresar" />
+      <Button layoutX="392.0" layoutY="181.0" mnemonicParsing="false" onAction="#transferir" text="Transferencia" />
+      <Button layoutX="374.0" layoutY="433.0" mnemonicParsing="false" onAction="#cambiarcontraseña" text="Cambiar contraseña" />
       <Button layoutX="61.0" layoutY="396.0" mnemonicParsing="false" onAction="#probar" text="probarusuarios" />
       <Label fx:id="bienvenidolbl" layoutX="27.0" layoutY="35.0" />
       <Button layoutX="65.0" layoutY="451.0" mnemonicParsing="false" onAction="#probarbilletes" text="probarbilletes" />
-      <Button layoutX="366.0" layoutY="312.0" mnemonicParsing="false" onAction="#movimientos" text="Consultar movimientos" />
-      <Button layoutX="384.0" layoutY="353.0" mnemonicParsing="false" onAction="#cantidadbilletes" text="Cantidad billetes" />
+      <Button layoutX="364.0" layoutY="221.0" mnemonicParsing="false" onAction="#movimientos" text="Consultar movimientos" />
+      <Button layoutX="384.0" layoutY="343.0" mnemonicParsing="false" onAction="#cantidadbilletes" text="Cantidad billetes" />
+      <Button fx:id="cambiarusuario" layoutX="386.0" layoutY="384.0" mnemonicParsing="false" onAction="#cambiarusuario" text="Cambiar usuario" />
+      <Button layoutX="373.0" layoutY="276.0" mnemonicParsing="false" onAction="#divisas" text="Conversor de divisas" />
    </children>
 </Pane>
