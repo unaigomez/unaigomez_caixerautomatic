@@ -10,6 +10,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.TextField;
 
+/**
+ * Clase Ingresar que permite a los usuarios ingresar dinero a sus cuentas.
+ * 
+ * @author alumne
+ */
 public class Ingresar {
     @FXML
     TextField dinerotxt;
@@ -29,7 +34,10 @@ public class Ingresar {
     int cnt10 = 0;
     int cnt5 = 0;
     
-    
+    /**
+     * Método para ingresar dinero en la cuenta elegida.
+     * 
+     */
     @FXML 
     void ingresar(){
         double dinero = totalIngreso;
@@ -63,6 +71,9 @@ public class Ingresar {
         totalIngreso=0;
         alert.showAndWait();
     }
+    /**
+     * Método para sumar 500 euros al totalIngreso.
+     */
     @FXML
     void s500 () {
         totalIngreso += 500;
@@ -70,43 +81,63 @@ public class Ingresar {
         cnt500++;
         
     }
+    /**
+     * Método para sumar 200 euros al totalIngreso.
+     */
     @FXML
     void s200 () {
         totalIngreso += 200;
         dinerotxt.setText(Double.toString(totalIngreso));
         cnt200++;
     }
+    /**
+     * Método para sumar 100 euros al totalIngreso.
+     */
     @FXML
     void s100 () {
         totalIngreso += 100;
         dinerotxt.setText(Double.toString(totalIngreso));
         cnt100++;
     }
+    /**
+     * Método para sumar 50 euros al totalIngreso.
+     */
     @FXML
     void s50 () {
         totalIngreso += 50;
         dinerotxt.setText(Double.toString(totalIngreso));
         cnt50++;
     }
+    /**
+     * Método para sumar 20 euros al totalIngreso.
+     */
     @FXML
     void s20 () {
         totalIngreso += 20;
         dinerotxt.setText(Double.toString(totalIngreso));
         cnt20++;
     }
+    /**
+     * Método para sumar 10 euros al totalIngreso.
+     */
     @FXML
     void s10 () {
         totalIngreso += 10;
         dinerotxt.setText(Double.toString(totalIngreso));
         cnt10++;
     }
+    /**
+     * Método para sumar 5 euros al totalIngreso.
+     */
     @FXML
     void s5 () {
         totalIngreso += 5;
         dinerotxt.setText(Double.toString(totalIngreso));
         cnt5++;
     }
-    
+    /**
+     * Método para inicializar la pantalla con el combobox.
+     */
     @FXML
     void initialize() {
         List<Cuenta> cuentas = App.sesion.getCuentas();
@@ -144,6 +175,11 @@ public class Ingresar {
 
     }
     
+    /**
+     * Método para volver a la pantalla anterior.
+     * 
+     * @throws IOException Si ocurre un error al cargar el archivo FXML.
+     */     
     @FXML
     void volver() throws IOException {
         App.setRoot("menu");

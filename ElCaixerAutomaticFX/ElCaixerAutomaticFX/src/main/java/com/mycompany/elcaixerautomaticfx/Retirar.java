@@ -11,7 +11,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.TextField;
 
-
+/**
+ * Clase retirar que permite al usuario retirar dinero de sus cuentas.
+ * 
+ * @author alumne
+ */
 public class Retirar {
     @FXML
     TextField dinerotxt;
@@ -31,6 +35,10 @@ public class Retirar {
     int cnt10 = 0;
     int cnt5 = 0;
     
+    /**
+     * Método para retirar dinero de la cuenta
+     * 
+     */
     @FXML 
     void retirar(){
         double dinero = totalRetiro;
@@ -77,50 +85,72 @@ public class Retirar {
         
     }
     
-    
+    /**
+     * Método para añadir 500 euros a totalRetiro.
+     */
     @FXML
     void s500 () {
         totalRetiro += 500;
         dinerotxt.setText(Double.toString(totalRetiro));
         cnt500++;
     }
+    /**
+     * Método para añadir 200 euros a totalRetiro.
+     */
     @FXML
     void s200 () {
         totalRetiro += 200;
         dinerotxt.setText(Double.toString(totalRetiro));
         cnt200++;
     }
+    /**
+     * Método para añadir 100 euros a totalRetiro.
+     */
     @FXML
     void s100 () {
         totalRetiro += 100;
         dinerotxt.setText(Double.toString(totalRetiro));
         cnt100++;
     }
+    /**
+     * Método para añadir 50 euros a totalRetiro.
+     */
     @FXML
     void s50 () {
         totalRetiro += 50;
         dinerotxt.setText(Double.toString(totalRetiro));
         cnt50++;
     }
+    /**
+     * Método para añadir 20 euros a totalRetiro.
+     */
     @FXML
     void s20 () {
         totalRetiro += 20;
         dinerotxt.setText(Double.toString(totalRetiro));
         cnt20++;
     }
+    /**
+     * Método para añadir 10 euros a totalRetiro.
+     */
     @FXML
     void s10 () {
         totalRetiro += 10;
         dinerotxt.setText(Double.toString(totalRetiro));
         cnt10++;
     }
+    /**
+     * Método para añadir 5 euros a totalRetiro.
+     */
     @FXML
     void s5 () {
         totalRetiro += 5;
         dinerotxt.setText(Double.toString(totalRetiro));
         cnt5++;
     }
-    
+    /**
+     * Método para inicializar la pantalla con los combobox.
+     */
     @FXML
     void initialize() {
         List<Cuenta> cuentas = App.sesion.getCuentas();
@@ -157,6 +187,12 @@ public class Retirar {
     });
 
     }
+    
+    /**
+     * Método para volver a la pantalla anterior.
+     * 
+     * @throws IOException Si ocurre un error al cargar el archivo FXML.
+     */ 
     
     @FXML
     void volver() throws IOException {

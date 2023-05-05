@@ -8,7 +8,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-
+/**
+ * Clase para controlar el inicio de sesión.
+ * 
+ * @author alumne
+ */
 public class PrimaryController {
     private Banco banco;
     @FXML
@@ -22,9 +26,20 @@ public class PrimaryController {
     
     int intentos = 0;
     
+    /**
+     * Método para establecer el banco.
+     * 
+     * @param banco El banco a establecer.
+     */    
     public void setBanco(Banco banco) {
     this.banco = banco;
 }
+     /**
+     * Método para iniciar sesión.
+     * 
+     * @param event Evento de acción del botón "aceptar".
+     * @throws IOException Si ocurre un error al cargar la vista del menú.
+     */
     @FXML
     void iniciarSesion(ActionEvent event) throws IOException {
         String usuario = usuarioTextField.getText();

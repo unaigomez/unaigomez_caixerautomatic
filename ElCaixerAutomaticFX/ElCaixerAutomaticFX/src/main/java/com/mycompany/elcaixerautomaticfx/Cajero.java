@@ -2,6 +2,11 @@
 package com.mycompany.elcaixerautomaticfx;
 
 import javafx.scene.control.Alert;
+/**
+ * Clase Cajero que representa un cajero automático con diferentes denominaciones de billetes.
+ * 
+ * @author alumne
+ */
 
 public class Cajero {
     private int billete500;
@@ -12,7 +17,10 @@ public class Cajero {
     private int billete10;
     private int billete5;
     private boolean operacion;
-
+    
+    /**
+     * Constructor del objeto Cajero con valores predeterminados para cada denominación de billetes.
+     */
     public Cajero() {
         this.billete500 = 100;
         this.billete200 = 100;
@@ -88,7 +96,12 @@ public class Cajero {
         this.operacion = operacion;
     }
     
-
+    /**
+     * Ingresa billetes en el cajero.
+     * 
+     * @param denominacion La denominación del billete a ingresar.
+     * @param cantidad La cantidad de billetes a ingresar.
+     */
     public void ingresarBilletes(int denominacion, int cantidad) {
         switch (denominacion) {
             case 500:
@@ -116,7 +129,13 @@ public class Cajero {
                 break;
         }
     }
-
+    
+    /**
+     * Retira billetes del cajero.
+     * 
+     * @param denominacion La denominación del billete a retirar.
+     * @param cantidad La cantidad de billetes a retirar.
+     */
     public void retirarBilletes(int denominacion, int cantidad) {
         operacion=true;
         switch (denominacion) {
@@ -210,7 +229,12 @@ public class Cajero {
                 break;
         }
     }
-
+    
+    /**
+     * Devuelve una representación en cadena del objeto Cajero.
+     * 
+     * @return Una cadena que representa al objeto Cajero.
+     */
     @Override
     public String toString() {
         return "Cajero{" + "500€=" + billete500 + ", 200€=" + billete200 + ", 100€=" + billete100 + ", 50€=" + billete50 + ", 20€=" + billete20 + ", 10€=" + billete10 + ", 5€=" + billete5 + '}';

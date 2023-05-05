@@ -6,7 +6,11 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-
+/**
+ * Clase Cantidadbilletes que muestra la cantidad de billetes en el cajero.
+ * 
+ * @author alumne
+ */
 public class Cantidadbilletes {
     @FXML
     Label b500;
@@ -23,6 +27,10 @@ public class Cantidadbilletes {
     @FXML
     Label b5;
     
+    /**
+     * Método para inicializar la pantalla con la cantidad de billetes.
+     * 
+     */    
     @FXML
     void initialize() {
         b500.setText(Integer.toString(App.cajero.getBillete500()));
@@ -34,6 +42,11 @@ public class Cantidadbilletes {
         b5.setText(Integer.toString(App.cajero.getBillete5()));
     }
     
+    /**
+     * Método para volver a la pantalla anterior.
+     * 
+     * @throws IOException Si ocurre un error al cargar el archivo FXML.
+     */    
     @FXML
     void volver() throws IOException {
         App.setRoot("ajustes");

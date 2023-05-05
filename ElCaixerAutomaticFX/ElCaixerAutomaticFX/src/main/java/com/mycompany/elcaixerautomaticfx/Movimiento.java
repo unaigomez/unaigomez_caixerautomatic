@@ -4,13 +4,23 @@ package com.mycompany.elcaixerautomaticfx;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-
+/**
+ * Clase que representa el objeto Movimiento
+ * 
+ * @author alumne
+ */
 public class Movimiento {
     private LocalDateTime fecha;
     private String tipo;
     private double importe;
     private String cuenta;
-
+    
+    /**
+     * Constructor del objeto Movimiento
+     * @param tipo Tipo de movimiento.
+     * @param importe Importe del movimiento.
+     * @param cuenta Cuenta a la que pertenece el movimiento.
+     */
     public Movimiento(String tipo, double importe, String cuenta) {
         this.fecha = LocalDateTime.now();
         this.tipo = tipo;
@@ -18,6 +28,11 @@ public class Movimiento {
         this.cuenta = cuenta;
     }
 
+    /**
+     * toString del objeto Movimiento.
+     * 
+     * @return toString Movimiento.
+     */
     @Override
     public String toString() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
@@ -26,7 +41,7 @@ public class Movimiento {
     }
 
     
-
+    //Getters y setters
     public LocalDateTime getFecha() {
         return fecha;
     }

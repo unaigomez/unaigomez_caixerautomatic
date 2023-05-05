@@ -7,6 +7,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 
+/**
+ * Clase Cambiarcontrasena que permite a los usuarios cambiar su contraseña.
+ * 
+ * @author alumne
+ */
 public class Cambiarcontrasena {
     
     @FXML
@@ -18,7 +23,10 @@ public class Cambiarcontrasena {
     @FXML
     Label mensaje;
     
-    
+    /**
+     * Método para cambiar la contraseña del usuario.
+     * 
+     */    
     @FXML
     void cambiar() {
         String antigua = antiguapswd.getText();
@@ -37,7 +45,11 @@ public class Cambiarcontrasena {
             mensaje.setText("Contraseña cambiada correctamente");
         }
     }
-    
+    /**
+     * Método para volver a la pantalla anterior.
+     * 
+     * @throws IOException Si ocurre un error al cargar el archivo FXML.
+     */    
     @FXML
     void volver() throws IOException {
         App.setRoot("ajustes");

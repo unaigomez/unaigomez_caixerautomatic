@@ -8,7 +8,11 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 
-
+/**
+ * Clase Divisas que permite al usuario usar un conversor de divisas.
+ * 
+ * @author alumne
+ */
 public class Divisas {
     
     private final double USD_RATE = 1.21; 
@@ -36,16 +40,17 @@ public class Divisas {
 
     @FXML
     private Label outputLabel;
-
+    
+    /**
+     * Método para inicializar la pantalla con los radioButton.
+     */
     @FXML
     private void initialize() {
-        // Configurar el evento para los botones de conversión
         a1.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
             double euros = Double.parseDouble(eurosTextField.getText());
             double rate = 0.0;
             String currency = "";
 
-            // Determinar el tipo de cambio y la moneda seleccionada
             if (usdRadioButton.isSelected()) {
                 rate = USD_RATE;
                 currency = "USD";
@@ -60,7 +65,6 @@ public class Divisas {
                 currency = "ARS";
             }
 
-            // Calcular el monto convertido y mostrarlo en la etiqueta
             double convertedAmount = euros * rate;
             outputLabel.setText(String.format("%.2f euros son %.2f %s", euros, convertedAmount, currency));
         });
@@ -68,7 +72,11 @@ public class Divisas {
 
     
     
-    
+    /**
+     * Volver a la pantalla anterior.
+     * 
+     * @throws IOException Si ocurre un error al cargar el archivo FXML.
+     */
     @FXML
     void volver() throws IOException {
         App.setRoot("ajustes");

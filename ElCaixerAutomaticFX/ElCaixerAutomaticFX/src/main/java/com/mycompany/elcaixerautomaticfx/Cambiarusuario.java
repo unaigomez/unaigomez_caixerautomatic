@@ -6,7 +6,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-
+/**
+ * Clase Cambiarusuario que permite a los usuarios cambiar su nombre de usuario.
+ * 
+ * @author alumne
+ */
 public class Cambiarusuario {
     @FXML
     TextField txt1;
@@ -15,6 +19,10 @@ public class Cambiarusuario {
     @FXML
     Label mensaje;
     
+    /**
+     * Método para cambiar el nombre de usuario del cliente.
+     * 
+     */    
     @FXML
     void cambiar() {
         String a1 = txt1.getText();
@@ -30,7 +38,12 @@ public class Cambiarusuario {
             mensaje.setText("Usuario cambiado correctamente");
         }
     }
-    
+   
+    /**
+     * Método para volver a la pantalla anterior.
+     * 
+     * @throws IOException Si ocurre un error al cargar el archivo FXML.
+     */    
     @FXML
     void volver() throws IOException {
         App.setRoot("ajustes");

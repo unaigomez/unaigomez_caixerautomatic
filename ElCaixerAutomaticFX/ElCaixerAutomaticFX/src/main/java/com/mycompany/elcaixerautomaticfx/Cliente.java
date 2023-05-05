@@ -4,13 +4,24 @@ package com.mycompany.elcaixerautomaticfx;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * Clase Cliente que representa a un cliente del cajero automático.
+ * 
+ * @author alumne
+ */
 public class Cliente {
     private String usuario;
     private String contrasena;
     private ArrayList<Cuenta> cuentas;
     private int idusuario;
-
+    
+    /**
+     * Constructor de la clase Cliente.
+     * 
+     * @param usuario El nombre de usuario del cliente.
+     * @param contrasena La contraseña del cliente.
+     * @param idusuario El ID del usuario del cliente.
+     */
     public Cliente(String usuario, String contrasena, int idusuario) {
         
         this.usuario = usuario;
@@ -18,19 +29,18 @@ public class Cliente {
         this.cuentas = new ArrayList<Cuenta>();
         this.idusuario = idusuario;
     }
-
-    public Cliente(String usuario, String contrasena) {
-        this.usuario = usuario;
-        this.contrasena = contrasena;
-        this.cuentas = new ArrayList<Cuenta>();
-
-    }
-
+    
+    /**
+     * Devuelve una representación en string del objeto Cliente
+     * 
+     * @return String representación del cliente.
+     */
     @Override
     public String toString() {
         return "Cliente{" + "usuario=" + usuario + ", contrasena=" + contrasena + ", cuentas=" + cuentas.toString() + ", idusuario=" + idusuario + '}';
     }
 
+    //Getters y setters
     public String getUsuario() {
         return usuario;
     }
@@ -64,11 +74,20 @@ public class Cliente {
     }
     
     
-
+    /**
+     * Método para agregar una cuenta al alrraylist cuentas del cliente.
+     * 
+     * @param cuenta Cuenta añadida al cliente.
+     */
     public void agregarCuenta(Cuenta cuenta) {
         cuentas.add(cuenta);
     }
     
+    /**
+     * Método para devolver la lista de movimientos de un cliente
+     * 
+     * @return Lista de movimientos del cliente
+     */
     public List<Movimiento> getMovimientos() {
         List<Movimiento> movimientos = new ArrayList<>();
         for (Cuenta cuenta : this.cuentas) {
@@ -76,14 +95,5 @@ public class Cliente {
         }
         return movimientos;
     }
-
-    
-    
-    
-    
-    
-    
-    
-    
 }
 

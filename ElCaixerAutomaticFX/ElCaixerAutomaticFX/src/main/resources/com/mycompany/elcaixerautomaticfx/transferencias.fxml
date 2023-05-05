@@ -10,7 +10,7 @@
    <children>
       <ComboBox fx:id="comboBoxCuentaOrigen" layoutX="133.0" layoutY="142.0" prefHeight="24.0" prefWidth="245.0" />
       <ComboBox fx:id="comboBoxCuentaDestino" layoutX="491.0" layoutY="142.0" prefHeight="24.0" prefWidth="245.0" />
-      <TextField fx:id="textFieldMonto" layoutX="502.0" layoutY="256.0" />
+      <TextField fx:id="textFieldDinero" layoutX="502.0" layoutY="256.0" />
       <Button fx:id="transferirButton" layoutX="578.0" layoutY="347.0" mnemonicParsing="false" onAction="#transferir" text="Transferir" />
       <Button layoutX="92.0" layoutY="413.0" mnemonicParsing="false" onAction="#volver" text="Volver" />
       <Label layoutX="81.0" layoutY="146.0" text="De:" textFill="WHITE" />
