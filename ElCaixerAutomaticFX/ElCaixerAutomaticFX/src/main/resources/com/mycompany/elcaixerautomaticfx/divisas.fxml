@@ -19,7 +19,7 @@
       <RadioButton fx:id="gbpRadioButton" layoutX="53.0" layoutY="215.0" mnemonicParsing="false" text="GBP" toggleGroup="$a1" />
       <RadioButton fx:id="mxnRadioButton" layoutX="53.0" layoutY="243.0" mnemonicParsing="false" text="MXN" toggleGroup="$a1" />
       <RadioButton fx:id="arsRadioButton" layoutX="52.0" layoutY="271.0" mnemonicParsing="false" text="ARS" toggleGroup="$a1" />
-      <Label fx:id="outputLabel" layoutX="365.0" layoutY="177.0" prefHeight="16.0" prefWidth="32.0" textFill="WHITE" />
+      <Label fx:id="outputLabel" layoutX="365.0" layoutY="177.0" prefHeight="16.0" prefWidth="416.0" textFill="WHITE" />
       <Label layoutX="252.0" layoutY="104.0" text="Cantidad (€):" textFill="WHITE" />
    </children>
 </Pane>
