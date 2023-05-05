@@ -11,7 +11,7 @@
       <Button layoutX="195.0" layoutY="148.0" mnemonicParsing="false" onAction="#consultarsaldo" prefHeight="36.0" prefWidth="195.0" text="Consultar saldo" />
       <Button layoutX="390.0" layoutY="282.0" mnemonicParsing="false" onAction="#retirar" prefHeight="36.0" prefWidth="120.0" stylesheets="@estilo.css" text="Retirar" />
       <Button layoutX="233.0" layoutY="282.0" mnemonicParsing="false" onAction="#ingresar" prefHeight="36.0" prefWidth="120.0" text="Ingresar" />
-      <Button layoutX="548.0" layoutY="282.0" mnemonicParsing="false" onAction="#transferir" prefHeight="36.0" prefWidth="120.0" text="Transferencia" />
+      <Button layoutX="548.0" layoutY="282.0" mnemonicParsing="false" onAction="#transferir" prefHeight="36.0" prefWidth="134.0" text="Transferencia" />
       <Label fx:id="bienvenidolbl" layoutX="27.0" layoutY="35.0" textFill="WHITE" />
       <Button layoutX="510.0" layoutY="148.0" mnemonicParsing="false" onAction="#movimientos" prefHeight="36.0" prefWidth="195.0" text="Consultar movimientos" />
       <Label layoutX="340.0" layoutY="17.0" text="Menú Principal">
