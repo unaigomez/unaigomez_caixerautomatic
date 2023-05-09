@@ -24,7 +24,7 @@ public class Cambiarusuario {
      * 
      */    
     @FXML
-    void cambiar() {
+    public void cambiar() {
         String a1 = txt1.getText();
         String a2 = txt2.getText();
         
@@ -45,7 +45,7 @@ public class Cambiarusuario {
      * @throws IOException Si ocurre un error al cargar el archivo FXML.
      */    
     @FXML
-    void volver() throws IOException {
+    public void volver() throws IOException {
         App.setRoot("ajustes");
     }
 }

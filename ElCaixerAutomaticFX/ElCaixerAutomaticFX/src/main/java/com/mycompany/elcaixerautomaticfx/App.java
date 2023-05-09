@@ -1,5 +1,7 @@
 package com.mycompany.elcaixerautomaticfx;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,6 +9,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * Clase principal de la aplicación.
  * 
@@ -18,10 +23,19 @@ public class App extends Application {
 
     static Banco banco;
 
-    static Cliente c1;
-    static Cliente c2;
     static Cliente sesion;
+
+    /**
+     * Método para establecer la sesión iniciada
+     * 
+     * @param cliente cliente iniciado
+     */
+    public static void setSesion(Cliente cliente) {
+        sesion = cliente;
+    }
+
     static Cajero cajero;
+    static ArrayList<Cuenta> cuentas = new ArrayList<>();
 
     /**
      * Devuelve el objeto Banco.
@@ -56,19 +70,18 @@ public class App extends Application {
      * @throws IOException Si no se puede cargar el archivo FXML.
      */
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws IOException, URISyntaxException {
 
         banco = new Banco("BBVA");
         cajero = new Cajero();
 
-        c1 = new Cliente("ugomez", "ugomez",0001);
-        c1.agregarCuenta(new CuentaCorriente("01",1000));
-        c1.agregarCuenta(new Cuenta("02","Ahorros",1500));
-        c2 = new Cliente("u2", "u2",0002);
-        c2.agregarCuenta(new CuentaCorriente("03",2000));
-        c2.agregarCuenta(new Cuenta("04","Ahorros",3000));
-        banco.agregarCliente(c1);
-        banco.agregarCliente(c2);
+        File archivoUsuarios = new File(getClass().getResource("/com/mycompany/elcaixerautomaticfx/usuarios.txt").toURI());
+        cargarUsuarios(archivoUsuarios);
+
+        File archivoCuentas = new File(getClass().getResource("/com/mycompany/elcaixerautomaticfx/cuentas.txt").toURI());
+        cuentas = cargarCuentas(archivoCuentas);
+
+        asociarCuentasAClientes();
 
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("login.fxml"));
 
@@ -79,6 +92,74 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
     }
+    
+    /**
+     * Método para cargar los usuarios desde un archivo .txt
+     * 
+     * @param archivo El archivo de usuarios
+     * @throws FileNotFoundException 
+     */
+    public void cargarUsuarios(File archivo) throws FileNotFoundException {
+        Scanner scanner = new Scanner(archivo);
+        while (scanner.hasNextLine()) {
+            String linea = scanner.nextLine();
+            String[] datos = linea.split(",");
+            String usuario = datos[0];
+            String contrasena = datos[1];
+            int numeroCuenta = Integer.parseInt(datos[2]);
+            Cliente cliente = new Cliente(usuario, contrasena, numeroCuenta);
+            banco.agregarCliente(cliente);
+        }
+        scanner.close();
+    }
+    
+    /**
+     * Método para cargar las cuentas desde un archivo .txt
+     * 
+     * @param archivo Archivo .txt de las cuentas
+     * @return Arraylist de las cuentas del archivo cuentas.txt
+     * @throws FileNotFoundException 
+     */
+    public ArrayList<Cuenta> cargarCuentas(File archivo) throws FileNotFoundException {
+        ArrayList<Cuenta> cuentas = new ArrayList<>();
+        Scanner scanner = new Scanner(archivo);
+        while (scanner.hasNextLine()) {
+            String linea = scanner.nextLine();
+            String[] datos = linea.split(",");
+            String tipoCuenta = datos[0];
+            String numeroCuenta = datos[1];
+            double saldoActual = Double.parseDouble(datos[2]);
+            int idusuario = Integer.parseInt(datos[3]);
+            Cuenta cuenta = null;
+            if (tipoCuenta.equals("Corriente")) {
+                cuenta = new CuentaCorriente(numeroCuenta, saldoActual, idusuario); 
+            } else if (tipoCuenta.equals("Ahorro")) {
+                cuenta = new Cuenta(numeroCuenta, "Ahorros", saldoActual, idusuario);
+            }
+            cuentas.add(cuenta);
+        }
+        scanner.close();
+        return cuentas;
+    }
+
+    /**
+     * Método para asociar las cuentas a los clientes.
+     * 
+     */
+    public void asociarCuentasAClientes() {
+        for (Cliente cliente : banco.getClientes()) {
+            for (Cuenta cuenta : cuentas) {
+                // Cambiar la condición para comparar el idusuario de Cliente con el idusuario de Cuenta
+                if (cuenta.getIdusuario() == cliente.getIdusuario()) {
+                    cliente.agregarCuenta(cuenta);
+                }
+            }
+        }
+    }
+
+
+
+
 
     /**
      * Cambia la vista de la aplicación.

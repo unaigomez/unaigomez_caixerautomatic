@@ -80,7 +80,7 @@ public class Transferir {
      * @param event 
      */
     @FXML
-    void transferir(ActionEvent event) {
+    public void transferir(ActionEvent event) {
 
         Cuenta cuentaOrigen = comboBoxCuentaOrigen.getSelectionModel().getSelectedItem();
         Cuenta cuentaDestino = comboBoxCuentaDestino.getSelectionModel().getSelectedItem();
@@ -114,7 +114,7 @@ public class Transferir {
      * @throws IOException Si ocurre un error al cargar el archivo FXML.
      */        
     @FXML
-    void volver() throws IOException {
+    public void volver() throws IOException {
         App.setRoot("menu");
     }
 }

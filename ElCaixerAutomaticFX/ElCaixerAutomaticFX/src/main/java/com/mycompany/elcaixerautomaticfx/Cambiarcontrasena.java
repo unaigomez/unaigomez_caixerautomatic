@@ -28,7 +28,7 @@ public class Cambiarcontrasena {
      * 
      */    
     @FXML
-    void cambiar() {
+    public void cambiar() {
         String antigua = antiguapswd.getText();
         String nueva1 = nueva1pswd.getText();
         String nueva2 = nueva2pswd.getText();
@@ -51,7 +51,7 @@ public class Cambiarcontrasena {
      * @throws IOException Si ocurre un error al cargar el archivo FXML.
      */    
     @FXML
-    void volver() throws IOException {
+    public void volver() throws IOException {
         App.setRoot("ajustes");
     }
 }

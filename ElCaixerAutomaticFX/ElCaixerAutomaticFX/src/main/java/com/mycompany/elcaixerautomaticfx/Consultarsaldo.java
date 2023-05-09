@@ -28,7 +28,7 @@ public class Consultarsaldo {
      * 
      */    
     @FXML
-    void initialize() {
+    public void initialize() {
         List<Cuenta> cuentas = App.sesion.getCuentas();
         comboBoxCuentas.getItems().addAll(cuentas);
         comboBoxCuentas.setCellFactory(param -> new ListCell<Cuenta>() {
@@ -62,7 +62,7 @@ public class Consultarsaldo {
      * @throws IOException Si ocurre un error al cargar el archivo FXML.
      */    
     @FXML
-    void volver() throws IOException {
+    public void volver() throws IOException {
         App.setRoot("menu");
     }
 }

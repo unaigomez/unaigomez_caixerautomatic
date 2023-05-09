@@ -18,7 +18,7 @@ public class SecondaryController {
      * 
      */
     @FXML
-    void initialize() {
+    public void initialize() {
         bienvenidolbl.setText("Bienvenido "+App.sesion.getUsuario());
     }
     /**
@@ -27,7 +27,7 @@ public class SecondaryController {
      * @throws IOException Si ocurre un error al cargar el archivo FXML.
      */
     @FXML
-    private void cerrarsesion() throws IOException{
+    public void cerrarsesion() throws IOException{
        App.logout();
        App.setRoot("login");
 
@@ -37,7 +37,7 @@ public class SecondaryController {
      * @throws IOException Si ocurre un error al cargar el archivo FXML.
      */
     @FXML
-    private void consultarsaldo() throws IOException{
+    public void consultarsaldo() throws IOException{
        App.setRoot("consultarsaldo");
     }
     /**
@@ -45,7 +45,7 @@ public class SecondaryController {
      * @throws IOException Si ocurre un error al cargar el archivo FXML.
      */
     @FXML
-    private void ingresar() throws IOException{
+    public void ingresar() throws IOException{
        App.setRoot("ingresar");
     }
     /**
@@ -53,7 +53,7 @@ public class SecondaryController {
      * @throws IOException Si ocurre un error al cargar el archivo FXML.
      */
     @FXML
-    private void transferir() throws IOException{
+    public void transferir() throws IOException{
        App.setRoot("transferencias");
     }
     /**
@@ -61,7 +61,7 @@ public class SecondaryController {
      * @throws IOException Si ocurre un error al cargar el archivo FXML.
      */
     @FXML
-    private void retirar() throws IOException{
+    public void retirar() throws IOException{
        App.setRoot("retirar");
     }
     /**
@@ -69,7 +69,7 @@ public class SecondaryController {
      * @throws IOException Si ocurre un error al cargar el archivo FXML.
      */
     @FXML
-    private void movimientos() throws IOException{
+    public void movimientos() throws IOException{
         App.setRoot("movimientos");
     }
     /**
@@ -77,7 +77,7 @@ public class SecondaryController {
      * @throws IOException Si ocurre un error al cargar el archivo FXML.
      */
     @FXML
-    private void ajustes() throws IOException{
+    public void ajustes() throws IOException{
         App.setRoot("ajustes");
     }
 }

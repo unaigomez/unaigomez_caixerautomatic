@@ -40,7 +40,7 @@ public class Retirar {
      * 
      */
     @FXML 
-    void retirar(){
+    public void retirar(){
         double dinero = totalRetiro;
         Cuenta cuentaSeleccionada = comboBoxCuentas.getSelectionModel().getSelectedItem();
         if (cuentaSeleccionada != null) {
@@ -76,7 +76,7 @@ public class Retirar {
             cuentaSeleccionada.setSaldoActual(saldoNuevo);
             System.out.println(cuentaSeleccionada.getSaldoActual());
             labelSaldo.setText("Saldo: " + saldoNuevo);
-            cuentaSeleccionada.agregarMovimiento(new Movimiento("Retiro",-totalRetiro,cuentaSeleccionada.getNumeroCuenta()));
+            cuentaSeleccionada.agregarMovimiento(new Movimiento("Retiro",totalRetiro,cuentaSeleccionada.getNumeroCuenta()));
             Alert alert = new Alert(Alert.AlertType.INFORMATION, "El retiro se realizó exitosamente");
             alert.showAndWait();
             totalRetiro = 0;
@@ -89,7 +89,7 @@ public class Retirar {
      * Método para añadir 500 euros a totalRetiro.
      */
     @FXML
-    void s500 () {
+    public void s500 () {
         totalRetiro += 500;
         dinerotxt.setText(Double.toString(totalRetiro));
         cnt500++;
@@ -98,7 +98,7 @@ public class Retirar {
      * Método para añadir 200 euros a totalRetiro.
      */
     @FXML
-    void s200 () {
+    public void s200 () {
         totalRetiro += 200;
         dinerotxt.setText(Double.toString(totalRetiro));
         cnt200++;
@@ -107,7 +107,7 @@ public class Retirar {
      * Método para añadir 100 euros a totalRetiro.
      */
     @FXML
-    void s100 () {
+    public void s100 () {
         totalRetiro += 100;
         dinerotxt.setText(Double.toString(totalRetiro));
         cnt100++;
@@ -116,7 +116,7 @@ public class Retirar {
      * Método para añadir 50 euros a totalRetiro.
      */
     @FXML
-    void s50 () {
+    public void s50 () {
         totalRetiro += 50;
         dinerotxt.setText(Double.toString(totalRetiro));
         cnt50++;
@@ -125,7 +125,7 @@ public class Retirar {
      * Método para añadir 20 euros a totalRetiro.
      */
     @FXML
-    void s20 () {
+    public void s20 () {
         totalRetiro += 20;
         dinerotxt.setText(Double.toString(totalRetiro));
         cnt20++;
@@ -134,7 +134,7 @@ public class Retirar {
      * Método para añadir 10 euros a totalRetiro.
      */
     @FXML
-    void s10 () {
+    public void s10 () {
         totalRetiro += 10;
         dinerotxt.setText(Double.toString(totalRetiro));
         cnt10++;
@@ -143,7 +143,7 @@ public class Retirar {
      * Método para añadir 5 euros a totalRetiro.
      */
     @FXML
-    void s5 () {
+    public void s5 () {
         totalRetiro += 5;
         dinerotxt.setText(Double.toString(totalRetiro));
         cnt5++;
@@ -152,7 +152,7 @@ public class Retirar {
      * Método para inicializar la pantalla con los combobox.
      */
     @FXML
-    void initialize() {
+    public void initialize() {
         List<Cuenta> cuentas = App.sesion.getCuentas();
         comboBoxCuentas.getItems().addAll(cuentas);
         comboBoxCuentas.setCellFactory(param -> new ListCell<Cuenta>() {
@@ -174,17 +174,17 @@ public class Retirar {
             }
         });
         double saldoTotal = 0;
-    for (Cuenta cuenta : cuentas) {
-        saldoTotal += cuenta.getSaldoActual();
-    }
-    retirarbtn.setDisable(true);
-    comboBoxCuentas.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
-        retirarbtn.setDisable(newVal == null || dinerotxt.getText().isEmpty());
-    });
+        for (Cuenta cuenta : cuentas) {
+            saldoTotal += cuenta.getSaldoActual();
+        }
+        retirarbtn.setDisable(true);
+        comboBoxCuentas.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
+            retirarbtn.setDisable(newVal == null || dinerotxt.getText().isEmpty());
+        });
 
-    dinerotxt.textProperty().addListener((obs, oldVal, newVal) -> {
-        retirarbtn.setDisable(comboBoxCuentas.getSelectionModel().isEmpty() || newVal.isEmpty());
-    });
+        dinerotxt.textProperty().addListener((obs, oldVal, newVal) -> {
+            retirarbtn.setDisable(comboBoxCuentas.getSelectionModel().isEmpty() || newVal.isEmpty());
+        });
 
     }
     
@@ -195,7 +195,7 @@ public class Retirar {
      */ 
     
     @FXML
-    void volver() throws IOException {
+    public void volver() throws IOException {
         App.setRoot("menu");
     }
 }

@@ -37,7 +37,7 @@ public class Movimiento {
     public String toString() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         String fechaFormateada = fecha.format(formatter);
-        return "Movimiento ==> {" + "Fecha = " + fechaFormateada + "  |  Tipo =" + tipo + " |  Importe =" + importe + "€  |  Cuenta = "+ cuenta+ '}';
+        return "Movimiento ==> {" + "Fecha = " + fechaFormateada + "  |  Tipo = " + tipo + " |  Importe = " + importe + "€  |  Cuenta = "+ cuenta+ '}';
     }
 
     

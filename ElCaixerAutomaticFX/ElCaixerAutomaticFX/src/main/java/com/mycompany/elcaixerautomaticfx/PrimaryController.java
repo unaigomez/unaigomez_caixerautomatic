@@ -41,22 +41,17 @@ public class PrimaryController {
      * @throws IOException Si ocurre un error al cargar la vista del menú.
      */
     @FXML
-    void iniciarSesion(ActionEvent event) throws IOException {
+    public void iniciarSesion(ActionEvent event) throws IOException {
         String usuario = usuarioTextField.getText();
         String contrasena = contrasenaPasswordField.getText();
-        
+
         if (usuario.equals("") || contrasena.equals("")) {
             mensajeLabel.setText("Rellena todos los campos.");
         } else {
             Cliente sesion = App.banco.buscarCliente(usuario, contrasena);
             if (sesion != null) {
-                App.sesion= sesion;
+                App.setSesion(sesion);
                 System.out.println("Sesión iniciada");
-                if (sesion.getIdusuario()==0001) {
-                    App.sesion(App.c1);
-                } else if (sesion.getIdusuario()==0002) {
-                    App.sesion(App.c2);
-                }
                 App.setRoot("menu");
             } else {
                 intentos++;
@@ -68,6 +63,7 @@ public class PrimaryController {
                 }
             }
         }
-        
+
     }
+
 }

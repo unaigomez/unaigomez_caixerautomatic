@@ -32,7 +32,7 @@ public class Cantidadbilletes {
      * 
      */    
     @FXML
-    void initialize() {
+    public void initialize() {
         b500.setText(Integer.toString(App.cajero.getBillete500()));
         b200.setText(Integer.toString(App.cajero.getBillete200()));
         b100.setText(Integer.toString(App.cajero.getBillete100()));
@@ -48,7 +48,7 @@ public class Cantidadbilletes {
      * @throws IOException Si ocurre un error al cargar el archivo FXML.
      */    
     @FXML
-    void volver() throws IOException {
+    public void volver() throws IOException {
         App.setRoot("ajustes");
     }
 }

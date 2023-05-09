@@ -21,7 +21,7 @@ public class Movimientos {
      * Método para inicializar la pantalla con el textArea lleno de los movimientos del usuario.
      */
     @FXML
-    void initialize() {
+    public void initialize() {
         List<Movimiento> movimientos = App.sesion.getMovimientos();
         StringBuilder sb = new StringBuilder();
         for (Movimiento movimiento : movimientos) {
@@ -37,7 +37,7 @@ public class Movimientos {
      * @throws IOException Si ocurre un error al cargar el archivo FXML.
      */      
     @FXML
-    void volver() throws IOException {
+    public void volver() throws IOException {
         App.setRoot("menu");
     }
 }

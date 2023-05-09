@@ -16,7 +16,7 @@ public class Ajustes {
      * @throws IOException si se produce un error al cambiar a la ventana "cantidadbilletes".
      */
     @FXML
-    private void cantidadbilletes() throws IOException {
+    public void cantidadbilletes() throws IOException {
         App.setRoot("cantidadbilletes");
     }
 
@@ -26,7 +26,7 @@ public class Ajustes {
      * @throws IOException si se produce un error al cambiar a la ventana "cambiarusuario".
      */
     @FXML
-    private void cambiarusuario() throws IOException {
+    public void cambiarusuario() throws IOException {
         App.setRoot("cambiarusuario");
     }
 
@@ -36,7 +36,7 @@ public class Ajustes {
      * @throws IOException si se produce un error al cambiar a la ventana "divisas".
      */
     @FXML
-    private void divisas() throws IOException {
+    public void divisas() throws IOException {
         App.setRoot("divisas");
     }
 
@@ -46,7 +46,7 @@ public class Ajustes {
      * @throws IOException si se produce un error al cambiar a la ventana "cambiarcontrasena".
      */
     @FXML
-    private void cambiarcontraseña() throws IOException {
+    public void cambiarcontraseña() throws IOException {
         App.setRoot("cambiarcontrasena");
     }
 
@@ -56,7 +56,7 @@ public class Ajustes {
      * @throws IOException si se produce un error al cambiar a la ventana "menu".
      */
     @FXML
-    void volver() throws IOException {
+    public void volver() throws IOException {
         App.setRoot("menu");
     }
 }

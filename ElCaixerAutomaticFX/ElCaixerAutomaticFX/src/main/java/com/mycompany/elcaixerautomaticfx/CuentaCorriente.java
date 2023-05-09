@@ -12,8 +12,8 @@ public class CuentaCorriente extends Cuenta {
      * @param numeroCuenta El número de cuenta.
      * @param saldoActual El saldo actual de la cuenta corriente.
      */    
-    public CuentaCorriente(String numeroCuenta, double saldoActual) {
-        super(numeroCuenta, "Corriente", saldoActual);
+    public CuentaCorriente(String numeroCuenta, double saldoActual, int idusuario) {
+        super(numeroCuenta, "Corriente", saldoActual, idusuario);
     }
     
     /**

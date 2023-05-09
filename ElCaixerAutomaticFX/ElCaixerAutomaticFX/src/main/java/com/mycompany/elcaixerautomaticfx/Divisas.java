@@ -45,7 +45,7 @@ public class Divisas {
      * Método para inicializar la pantalla con los radioButton.
      */
     @FXML
-    private void initialize() {
+    public void initialize() {
         a1.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
             double euros = Double.parseDouble(eurosTextField.getText());
             double rate = 0.0;
@@ -78,7 +78,7 @@ public class Divisas {
      * @throws IOException Si ocurre un error al cargar el archivo FXML.
      */
     @FXML
-    void volver() throws IOException {
+    public void volver() throws IOException {
         App.setRoot("ajustes");
     }
 }

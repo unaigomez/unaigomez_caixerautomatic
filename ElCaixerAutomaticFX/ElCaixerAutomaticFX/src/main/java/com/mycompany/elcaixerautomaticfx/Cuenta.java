@@ -14,6 +14,7 @@ public class Cuenta {
     private String tipoCuenta;
     private double saldoActual;
     private ArrayList<Movimiento> movimientos;
+    private int idusuario;
     
     /**
      * Constructor de la clase Cuenta.
@@ -22,11 +23,12 @@ public class Cuenta {
      * @param tipoCuenta El tipo de cuenta.
      * @param saldoActual El saldo actual de la cuenta.
      */
-    public Cuenta(String numeroCuenta, String tipoCuenta, double saldoActual) {
+    public Cuenta(String numeroCuenta, String tipoCuenta, double saldoActual, int idusuario) {
         this.numeroCuenta = numeroCuenta;
         this.tipoCuenta = tipoCuenta;
         this.saldoActual = saldoActual;
         this.movimientos = new ArrayList<Movimiento>();
+        this.idusuario= idusuario;
     }
 
     /**
@@ -70,6 +72,14 @@ public class Cuenta {
 
     public void setMovimientos(ArrayList<Movimiento> movimientos) {
         this.movimientos = movimientos;
+    }
+
+    public int getIdusuario() {
+        return idusuario;
+    }
+
+    public void setIdusuario(int idusuario) {
+        this.idusuario = idusuario;
     }
     
 

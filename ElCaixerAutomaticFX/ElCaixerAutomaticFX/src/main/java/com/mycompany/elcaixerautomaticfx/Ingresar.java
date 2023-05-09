@@ -39,7 +39,7 @@ public class Ingresar {
      * 
      */
     @FXML 
-    void ingresar(){
+    public void ingresar(){
         double dinero = totalIngreso;
         Cuenta cuentaSeleccionada = comboBoxCuentas.getSelectionModel().getSelectedItem();
         if (cuentaSeleccionada != null) {
@@ -75,7 +75,7 @@ public class Ingresar {
      * Método para sumar 500 euros al totalIngreso.
      */
     @FXML
-    void s500 () {
+    public void s500 () {
         totalIngreso += 500;
         dinerotxt.setText(Double.toString(totalIngreso));
         cnt500++;
@@ -85,7 +85,7 @@ public class Ingresar {
      * Método para sumar 200 euros al totalIngreso.
      */
     @FXML
-    void s200 () {
+    public void s200 () {
         totalIngreso += 200;
         dinerotxt.setText(Double.toString(totalIngreso));
         cnt200++;
@@ -94,7 +94,7 @@ public class Ingresar {
      * Método para sumar 100 euros al totalIngreso.
      */
     @FXML
-    void s100 () {
+    public void s100 () {
         totalIngreso += 100;
         dinerotxt.setText(Double.toString(totalIngreso));
         cnt100++;
@@ -103,7 +103,7 @@ public class Ingresar {
      * Método para sumar 50 euros al totalIngreso.
      */
     @FXML
-    void s50 () {
+    public void s50 () {
         totalIngreso += 50;
         dinerotxt.setText(Double.toString(totalIngreso));
         cnt50++;
@@ -112,7 +112,7 @@ public class Ingresar {
      * Método para sumar 20 euros al totalIngreso.
      */
     @FXML
-    void s20 () {
+    public void s20 () {
         totalIngreso += 20;
         dinerotxt.setText(Double.toString(totalIngreso));
         cnt20++;
@@ -121,7 +121,7 @@ public class Ingresar {
      * Método para sumar 10 euros al totalIngreso.
      */
     @FXML
-    void s10 () {
+    public void s10 () {
         totalIngreso += 10;
         dinerotxt.setText(Double.toString(totalIngreso));
         cnt10++;
@@ -130,7 +130,7 @@ public class Ingresar {
      * Método para sumar 5 euros al totalIngreso.
      */
     @FXML
-    void s5 () {
+    public void s5 () {
         totalIngreso += 5;
         dinerotxt.setText(Double.toString(totalIngreso));
         cnt5++;
@@ -139,7 +139,7 @@ public class Ingresar {
      * Método para inicializar la pantalla con el combobox.
      */
     @FXML
-    void initialize() {
+    public void initialize() {
         List<Cuenta> cuentas = App.sesion.getCuentas();
         comboBoxCuentas.getItems().addAll(cuentas);
         comboBoxCuentas.setCellFactory(param -> new ListCell<Cuenta>() {
@@ -161,17 +161,17 @@ public class Ingresar {
             }
         });
         double saldoTotal = 0;
-    for (Cuenta cuenta : cuentas) {
-        saldoTotal += cuenta.getSaldoActual();
-    }
-    ingresarbtn.setDisable(true);
-    comboBoxCuentas.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
-        ingresarbtn.setDisable(newVal == null || dinerotxt.getText().isEmpty());
-    });
+        for (Cuenta cuenta : cuentas) {
+            saldoTotal += cuenta.getSaldoActual();
+        }
+        ingresarbtn.setDisable(true);
+        comboBoxCuentas.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
+            ingresarbtn.setDisable(newVal == null || dinerotxt.getText().isEmpty());
+        });
 
-    dinerotxt.textProperty().addListener((obs, oldVal, newVal) -> {
-        ingresarbtn.setDisable(comboBoxCuentas.getSelectionModel().isEmpty() || newVal.isEmpty());
-    });
+        dinerotxt.textProperty().addListener((obs, oldVal, newVal) -> {
+            ingresarbtn.setDisable(comboBoxCuentas.getSelectionModel().isEmpty() || newVal.isEmpty());
+        });
 
     }
     
@@ -181,7 +181,7 @@ public class Ingresar {
      * @throws IOException Si ocurre un error al cargar el archivo FXML.
      */     
     @FXML
-    void volver() throws IOException {
+    public void volver() throws IOException {
         App.setRoot("menu");
     }
 }
